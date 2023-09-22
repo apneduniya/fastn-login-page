@@ -1,0 +1,128 @@
+-- import: fastn-community.github.io/inter-typography
+-- import: ayushsoni1010.github.io/button-component-challenge/components/button
+
+
+-- ftd.shadow component-shadow: 
+color: rgba(0,0,0,0.18)
+x-offset.px: 0
+y-offset.px: 5
+blur.px: 29
+
+-- ftd.shadow text-input-shadow: 
+color: rgba(0,0,0,0.1)
+x-offset.px: 0
+y-offset.px: 4
+blur.px: 29
+
+-- component wrapper:
+ftd.type-data types: $inter-typography.types
+
+;;  M A I N   P A G E 
+
+-- ftd.row:
+id: main-page
+align-content: center
+height: fill-container
+;; height.fixed.percent: 100
+width: fill-container
+;; background.solid: #222831
+
+;; Background image of main page
+-- ftd.image:
+fit: cover
+;; sticky: true
+src: https://i.pinimg.com/originals/de/1d/df/de1ddf9ee30e08e15460626b919ef87e.jpg
+;; blur.px: 10
+;; anchor.id: main-page
+anchor: window
+top.px: 0
+left.px: 0
+height: fill-container
+width: fill-container
+z-index: -1
+
+-- ftd.column:
+padding-horizontal.px: 40
+padding-vertical.px: 40
+align-self: center
+border-radius.px: 10
+shadow: $component-shadow
+background.solid: #eeeeeecf
+;; border-width.px: 2
+;; border-color: #222831
+
+-- ftd.text: Login
+margin-bottom.px: 32
+role: $inherited.types.heading-large
+align-self: center
+;; color: $inherited.colors.text-strong
+
+;; username
+-- ftd.text-input:
+margin-bottom.px: 20
+placeholder: Username
+padding-horizontal.px: 16
+padding-vertical.px: 8
+width.fixed.px: 260
+shadow: $text-input-shadow
+border-radius.px: 6
+
+;; password
+-- ftd.text-input:
+placeholder: Password
+padding-horizontal.px: 16
+padding-vertical.px: 8
+width.fixed.px: 260
+shadow: $text-input-shadow
+border-radius.px: 6
+
+;; forgot password row
+-- ftd.row:
+id: forgot-password-row
+height.fixed.px: 20
+width: fill-container
+margin-top.px: 16
+
+;; forgot password
+-- ftd.text: Forgot password?
+anchor.id: forgot-password-row
+right.px: 0
+color: #0706BC
+cursor: pointer
+
+-- end: ftd.row
+
+;; login button row
+-- ftd.row:
+align-self: center
+
+;; login button
+-- button.primary: 
+title: Login Now
+size: large
+link: #
+
+-- end: ftd.row
+
+;; new user register link row
+-- ftd.row:
+margin-top.px: 16
+align-self: center
+
+-- ftd.text: New user?
+margin-right.px: 4
+color: #222831
+
+-- ftd.text: Register
+color: #0706BC
+cursor: pointer
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+;; E N D  O F  M A I N  P A G E
+
+-- end: wrapper
